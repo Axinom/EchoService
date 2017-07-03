@@ -40,7 +40,7 @@ namespace EchoService
 
                     totalWritten += writeBytes;
 
-                    Trace.WriteLine($"Wrote {numBytes} bytes for a total of {totalWritten}.");
+                    Trace.WriteLine($"Wrote {writeBytes} bytes for a total of {totalWritten}.");
                 }
                 
             }
