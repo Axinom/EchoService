@@ -8,7 +8,7 @@ namespace EchoService
     {
         public void ProcessRequest(HttpContext context)
         {
-            context.Response.BufferOutput = true;
+            context.Response.BufferOutput = false;
 
             context.Response.ContentType = "application/octet-stream";
             context.Response.AddHeader("Content-Length", context.Request.ContentLength.ToString());
@@ -42,6 +42,7 @@ namespace EchoService
 
                     Trace.WriteLine($"Wrote {writeBytes} bytes for a total of {totalWritten}.");
                 }
+                
             }
 
             Trace.WriteLine("Finished request processing.");
